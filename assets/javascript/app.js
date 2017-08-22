@@ -20,7 +20,11 @@ var testDummy2 = $("#answers1")
 console.log(testDummy2);
 
 
+$(document).ready( function(){
+	$("#my-quiz").hide();
+	console.log("Line 25");
 
+});
 
 //this is where my real code starts
 function startCounting (){
@@ -52,6 +56,7 @@ function checkAnswers(){
 $("#start-game").on("click", function(){
 	startClock();
 	$("#submit").html("<button> SUBMIT! </button>");
+	$("#my-quiz").show();
 
 	$("input[name='question1']").on("click", function(){
 		realValue = this.value;
