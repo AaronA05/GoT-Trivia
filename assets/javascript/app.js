@@ -1,7 +1,7 @@
 //Global Variables
 
 //For the timer and answer checks
-var time = 30;
+var time = 60;
 var timeRunning = false;
 var timeID;
 var correct = 0;
@@ -110,9 +110,7 @@ function checkAnswers(){
 		incorrect++;
 	}
 
-
-
-
+	//Game over screen to show results and hide quiz
 	answersIn = true;
 	$("#my-quiz").hide();
 	$("#time-display").hide();
@@ -123,6 +121,7 @@ function checkAnswers(){
 	$("#game-over").append("<h2> You did not answer " + (totalQuestions - (correct + incorrect)) + " questions</h2>" )
 }
 
+//Global functions and variables defined above, this is game play
 //Set even listenr when page is done loading
 $(document).ready( function(){
 	//Hide the quiz and game over screen to start
